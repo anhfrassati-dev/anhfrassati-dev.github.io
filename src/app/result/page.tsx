@@ -20,6 +20,16 @@ function ResultContent() {
     const [petalsActive, setPetalsActive] = useState(false); // Start paused
     const [showNotice, setShowNotice] = useState(false);
     const [isZoomed, setIsZoomed] = useState(false); // New state for zoom
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        // Simple mobile detection
+        const checkMobile = () => {
+            const userAgent = typeof window !== "undefined" ? window.navigator.userAgent : "";
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+        };
+        setIsMobile(checkMobile());
+    }, []);
 
     useEffect(() => {
         if (!imgParam) {
@@ -88,11 +98,23 @@ function ResultContent() {
     const currentUrl = typeof window !== "undefined" ? window.location.href : "";
 
     const handleFacebookShare = () => {
-        window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl), "_blank");
+        const shareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+        if (isMobile) {
+            window.location.href = shareUrl;
+        } else {
+            window.open(shareUrl, "_blank");
+        }
     };
 
     const handleZaloShare = () => {
-        window.open("https://zalo.me/share/?url=" + encodeURIComponent(currentUrl), "_blank");
+        // Use sp.zalo.me/share_inline for better mobile compatibility or standard zalo.me/share
+        // Using standard share for stability, checking behavior on device 
+        const shareUrl = "https://zalo.me/share/?url=" + encodeURIComponent(currentUrl);
+        if (isMobile) {
+            window.location.href = shareUrl;
+        } else {
+            window.open(shareUrl, "_blank");
+        }
     };
 
     const handleInstaShare = () => {
