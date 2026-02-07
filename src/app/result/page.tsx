@@ -184,7 +184,7 @@ function ResultContent() {
                             <a
                                 href="https://anhfrassati.io.vn/"
                                 target="_blank"
-                                className="secondary-btn"
+                                className="link-btn"
                             >
                                 🌐 Website Thánh Pier Giorgio Frassati
                             </a>
@@ -193,12 +193,7 @@ function ResultContent() {
                                 href="/"
                                 className="secondary-btn"
                                 id="btn-home"
-                                style={{
-                                    marginTop: '0.5rem',
-                                    background: 'transparent',
-                                    border: '1px solid var(--maroon)',
-                                    color: 'var(--maroon)'
-                                }}
+                                style={{ marginTop: '0.5rem' }}
                             >
                                 ↩️ Quay về trang chủ
                             </Link>

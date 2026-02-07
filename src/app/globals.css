@@ -145,7 +145,8 @@ textarea {
    INTRO SCREEN - 3 Column Layout
    =================================== */
 #intro-screen {
-  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  background: url('/Hai-Loc-Dau-Nam/assets/images/loc/1.svg') no-repeat center center;
+  background-size: cover;
 }
 
 /* Full Width Layout */
@@ -249,13 +250,13 @@ textarea {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: var(--text);
+  color: #d31d38;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .parish:hover {
-  color: var(--maroon);
+  color: var(--red);
 }
 
 /* Main */
@@ -278,8 +279,12 @@ textarea {
   display: block;
   font-family: var(--font-playfair), Georgia, serif;
   font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text);
+  font-weight: 700;
+  color: #c63860;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .line2 {
@@ -288,11 +293,13 @@ textarea {
   font-size: 3.5rem;
   font-weight: 700;
   font-style: italic;
-  color: var(--maroon);
+  color: #c63860;
   margin: 0.2rem 0;
   text-shadow:
-    2px 2px 4px rgba(114, 47, 55, 0.25),
-    0 0 30px rgba(201, 162, 39, 0.3);
+    0 0 15px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 255, 255, 0.5),
+    0 0 45px rgba(201, 162, 39, 0.4),
+    3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .line2.glow {
@@ -333,13 +340,16 @@ textarea {
 
 /* Scripture Box */
 .scripture-box {
-  background: #fffef8;
+  background: rgba(255, 254, 248, 0.92);
   border: 2px solid var(--gold);
   border-radius: 6px;
   padding: 1rem 1.5rem;
   max-width: 450px;
   width: 100%;
   position: relative;
+  box-shadow:
+    0 4px 20px rgba(114, 47, 55, 0.15),
+    0 0 40px rgba(255, 255, 255, 0.3);
 }
 
 .scripture-box::before,
@@ -369,7 +379,7 @@ textarea {
   font-size: 1.05rem;
   font-style: italic;
   line-height: 1.6;
-  color: var(--text);
+  color: #ce0523;
   margin-bottom: 0.4rem;
 }
 
@@ -379,34 +389,114 @@ textarea {
   font-size: 0.9rem;
   font-style: normal;
   font-weight: 600;
-  color: var(--maroon);
+  color: #d31d38;
 }
 
 /* Instruction */
 .instruction {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: #c63961;
   line-height: 1.6;
   max-width: 420px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  font-weight: 500;
 }
 
 /* CTA Button */
 .cta-btn {
   padding: 0.7rem 2rem;
-  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
-  color: var(--gold-light);
-  border: 2px solid var(--gold);
-  border-radius: 6px;
+  background: linear-gradient(135deg, #c6395f 0%, #a02d4d 100%);
+  color: #ffffff;
+  border: 3px solid var(--gold);
+  border-radius: 8px;
   font-family: var(--font-noto-serif), Georgia, serif;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow:
+    0 4px 15px rgba(114, 47, 55, 0.4),
+    0 0 30px rgba(201, 162, 39, 0.3);
 }
 
 .cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(114, 47, 55, 0.4);
+}
+
+/* Website Link Button */
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background: #c63860;
+  /* Solid color as requested */
+  color: #ffffff;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(114, 47, 55, 0.3);
+}
+
+.link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(114, 47, 55, 0.4);
+}
+
+/* Secondary Button (Back Home) */
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background: transparent;
+  color: #c6395f;
+  /* Requested color */
+  border: 1px solid #c6395f;
+  border-radius: 8px;
+  font-family: var(--font-noto-serif), Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+  background: transparent;
+  transform: translateY(-1px);
+}
+
+/* Wish Text */
+.wish-text {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #c63961;
+  /* Updated for better visibility */
+  text-align: center;
+  margin: 1rem 0 0.5rem 0;
+  /* Increased spacing */
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.wish-text.hidden-initial {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.wish-text.revealing {
+  animation: reveal 1s ease-out forwards;
 }
 
 /* Footer */
@@ -483,7 +573,8 @@ textarea {
    TRANSITION SCREEN
    =================================== */
 #transition-screen {
-  background: linear-gradient(180deg, #0a0506 0%, #1a0a10 50%, #0a0506 100%);
+  background: url('/Hai-Loc-Dau-Nam/assets/images/loc/2.svg') no-repeat center center;
+  background-size: cover;
   justify-content: center;
   align-items: center;
 }
@@ -726,7 +817,12 @@ textarea {
   font-family: var(--font-eb-garamond), Georgia, serif;
   font-size: 1.4rem;
   font-style: italic;
-  color: var(--cream);
+  color: #c63961;
+  text-shadow:
+    0 0 10px rgba(201, 162, 39, 0.8),
+    0 0 20px rgba(201, 162, 39, 0.6),
+    0 0 30px rgba(201, 162, 39, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0.2rem 0;
   opacity: 0;
   transform: translateY(10px);
@@ -839,10 +935,16 @@ textarea {
 }
 
 .crucifix-img {
-  width: 80px;
+  width: 140px;
   height: auto;
-  filter: drop-shadow(0 0 10px rgba(201, 162, 39, 0.6));
-  animation: crucifixGlow 3s ease-in-out infinite, crucifixPulse 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5)) brightness(1.05) contrast(1.05);
+  animation: crucifixGlow 4s ease-in-out infinite, crucifixPulse 5s ease-in-out infinite;
+  mix-blend-mode: screen;
+  /* Masj to fade out squarish black edges if blend mode isn't perfect */
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 70%);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 70%);
+  border-radius: 50%;
+  /* Fallback circular clip */
 }
 
 /* Crucifix glowing animation */
@@ -850,15 +952,15 @@ textarea {
 
   0%,
   100% {
-    filter: drop-shadow(0 0 10px rgba(201, 162, 39, 0.6)) drop-shadow(0 0 20px rgba(201, 162, 39, 0.3));
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4)) brightness(1.05) contrast(1.05);
   }
 
   50% {
-    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.9)) drop-shadow(0 0 40px rgba(255, 215, 0, 0.5)) drop-shadow(0 0 60px rgba(255, 215, 0, 0.3));
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6)) brightness(1.15) contrast(1.1);
   }
 }
 
-/* Crucifix pulse animation - subtle breathing effect */
+/* Crucifix pulse animation */
 @keyframes crucifixPulse {
 
   0%,
@@ -867,7 +969,7 @@ textarea {
   }
 
   50% {
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
 }
 
@@ -1414,7 +1516,8 @@ textarea {
 
 /* Initial state - page coming from flip */
 #result-screen.reveal-mode {
-  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  background: url('/Hai-Loc-Dau-Nam/assets/images/loc/4.svg') no-repeat center center;
+  background-size: cover;
   overflow: hidden;
   perspective: 1500px;
 }
