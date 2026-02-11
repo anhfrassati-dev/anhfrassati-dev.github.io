@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/Hai-Loc-Dau-Nam', // Configured for GitHub Pages repo
+  // basePath removed for root domain deployment
   images: {
     unoptimized: true,
   },
