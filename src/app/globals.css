@@ -131,10 +131,14 @@ textarea {
 /* Screen System */
 .screen {
   display: none;
-  height: 100vh;
-  height: 100dvh;
+  width: 100%;
+  min-height: 100vh;
+  /* Allow height to grow */
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  -webkit-overflow-scrolling: touch;
 }
 
 .screen.active {
@@ -219,10 +223,13 @@ textarea {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0.8rem 1.5rem;
-  max-width: 700px;
+  justify-content: flex-start;
+  /* Start from top */
+  padding: 1rem 1.5rem;
+  max-width: 800px;
   margin: 0 auto;
+  min-height: 100vh;
+  /* Ensure it takes full height */
 }
 
 /* Header */
@@ -398,8 +405,49 @@ textarea {
   color: #c63961;
   line-height: 1.6;
   max-width: 420px;
+  margin: 0 auto;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   font-weight: 500;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  margin-top: auto;
+  border-top: 1px solid rgba(114, 47, 55, 0.1);
+  width: 100%;
+}
+
+.copyright {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--maroon);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-family: var(--font-noto-serif), Georgia, serif;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.contact {
+  font-family: var(--font-noto-serif), Georgia, serif;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.contact a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
 }
 
 /* CTA Button */
@@ -1066,19 +1114,22 @@ textarea {
 }
 
 .card-frame {
-  padding: 8px;
-  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #a17f1a 100%);
+  position: relative;
   border-radius: 8px;
-  box-shadow:
-    0 6px 25px rgba(0, 0, 0, 0.15),
-    0 0 40px rgba(201, 162, 39, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 4px;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blessing-img {
   width: 100%;
   height: auto;
-  display: block;
+  max-height: 55vh;
+  /* Limit height to prevent overflow */
+  object-fit: contain;
   border-radius: 4px;
+  display: block;
   background: #fffef8;
 }
 
