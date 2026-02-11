@@ -84,12 +84,12 @@ textarea {
 
 /* Hoa đào - Cherry blossom (pink) */
 .petal-pink {
-  background-image: url('/Hai-Loc-Dau-Nam/assets/images/petals/hoadao.png');
+  background-image: url('/assets/images/petals/hoadao.png');
 }
 
 /* Hoa mai - Apricot blossom (yellow) */
 .petal-yellow {
-  background-image: url('/Hai-Loc-Dau-Nam/assets/images/petals/hoamai.png');
+  background-image: url('/assets/images/petals/hoamai.png');
 }
 
 /* Fall animation */
@@ -149,7 +149,7 @@ textarea {
    INTRO SCREEN - 3 Column Layout
    =================================== */
 #intro-screen {
-  background: url('/Hai-Loc-Dau-Nam/assets/images/loc/1.svg') no-repeat center center;
+  background: url('/assets/images/loc/1.svg') no-repeat center center;
   background-size: cover;
 }
 
@@ -621,7 +621,7 @@ textarea {
    TRANSITION SCREEN
    =================================== */
 #transition-screen {
-  background: url('/Hai-Loc-Dau-Nam/assets/images/loc/2.svg') no-repeat center center;
+  background: url('/assets/images/loc/2.svg') no-repeat center center;
   background-size: cover;
   justify-content: center;
   align-items: center;

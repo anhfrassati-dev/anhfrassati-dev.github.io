@@ -23,7 +23,7 @@ export default function TransitionOverlay({ active, fadingOut, overlayActive }: 
                     <div className="center-crucifix">
                         {/* Note: Update src to absolute path public/assets */}
                         <img
-                            src="/Hai-Loc-Dau-Nam/assets/images/crucifix.png"
+                            src="/assets/images/crucifix.png"
                             alt="Cây Thánh Giá"
                             className="crucifix-img"
                         />
