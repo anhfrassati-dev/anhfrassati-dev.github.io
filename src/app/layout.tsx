@@ -29,11 +29,11 @@ const notoSerif = Noto_Serif({
 export const metadata: Metadata = {
   title: "Hái Lộc Lời Chúa Đầu Xuân 2026",
   description: "Hái Lộc Lời Chúa Đầu Xuân - Rút Lộc Thánh Online",
-  metadataBase: new URL("https://anhfrassati-dev.github.io/"),
+  metadataBase: new URL("https://locthanhanhfrassati.io.vn/"),
   openGraph: {
     title: "Hái Lộc Lời Chúa Đầu Xuân 2026",
     description: "Nhận Lộc Thánh đầu năm - Lời Chúa gửi đến bạn!",
-    url: "https://anhfrassati-dev.github.io/",
+    url: "https://locthanhanhfrassati.io.vn/",
     siteName: "Hái Lộc Lời Chúa",
     locale: "vi_VN",
     type: "website",
